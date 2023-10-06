@@ -11,7 +11,8 @@ class PetSerializer(serializers.Serializer):
     weight = serializers.FloatField()
     sex = serializers.ChoiceField(
         choices=SexChoices.choices,
-        default=SexChoices.NOT_INFORMED
+        default=SexChoices.NOT_INFORMED,
+        
     )
     group = GroupSerializer()
     traits = TraitSerializer(many=True)
